@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            -webkit-print-color-adjust: exact;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .right_aligned{
+            text-align: right;
+        }
+        .billing td.no_border{
+            border: none;
+        }
+        .header{
+            width: 100%;
+            padding: 30px 30px;
+            position: relative;
+        }
+        .credentials{
+            width: 100%;
+        }
+        .logo{
+            max-width: 50px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .logo img{
+            height: auto;
+            width: 100%;
+        }
+        .header__info{
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .credentials{
+            width: 100%;
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+        .credentials td{
+            line-height: 1.4em;
+        }
+        .credentials table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .credentials td{
+            border: 1px solid #0a0a0a;
+            padding: 5px 3px;
+        }
+        .billing{
+            width: 100%;
+            padding: 30px 30px;
+            box-sizing: border-box;
+        }
+        .billing__info{
+            padding-bottom: 20px;
+        }
+        .billing table{
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .billing td{
+            border: 1px solid #0a0a0a;
+            padding: 5px 3px;
+            line-height: 1.4em;
+        }
+        .signs{
+            width: 100%;
+            padding: 30px 30px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .signs table{
+            width: 80%;
+            position: relative;
+            z-index: 2;
+        }
+        .signs td{
+            line-height: 1.4em;
+        }
+        .signs__placeholder{
+            border-bottom: 1px solid black;
+            width: 200px;
+            margin: 0 10px;
+        }
+        .stamp{
+            max-width: 100px;
+            float: left;
+            position: absolute;
+            z-index: 1;
+            left: 115px;
+            top: 20px;
+        }
+        .stamp img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="header">
+        <div class="header__info">
+            <div>{{org_name_short}}</div>
+            <div>{{org_address}}</div>
+            <div>Тел.: {{org_phone}}</div>
+        </div>
+    </div>
+    <div class="credentials">
+        <table>
+            <tr>
+                <td>ИНН <span class="bold">{{org_inn}}</span></td>
+                <td>КПП <span class="bold">{{org_kpp}}</span></td>
+                <td rowspan="2">Сч. №</td>
+                <td rowspan="2"><span class="bold">{{org_bank_account_no1}}</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">Получатель<br /><span class="bold">{{org_name_short}}</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">Банк получателя<br /><span class="bold">{{org_bank}}</span></td>
+                <td rowspan="2">БИК<br />Сч. №</td>
+                <td rowspan="2"><span class="bold">{{org_bik}}</span><br /><span class="bold">{{org_bank_account_no2}}</span></td>
+            </tr>
+        </table>
+    </div>
+    <div class="billing">
+        <h1>{{bill_no}}</h1>
+        <h3>Оплата услуг</h3>
+        <div class="billing__info">{{payer}}</div>
+        <script>
+        window.onload=function(){
+            var data = {{data}};
+            for(var i in data){
+                var elem = data[i];
+                var coolTr = document.createElement('tr');
+                var tdNo = document.createElement('td');
+                tdNo.innerHTML = '' + (++i);
+                var tdProductName = document.createElement('td');
+                tdProductName.innerHTML = elem['product_name'];
+                var tdCount = document.createElement('td');
+                tdCount.innerHTML = '' + elem['count'];
+                var tdUnit = document.createElement('td');
+                tdUnit.innerHTML = '' + elem['unit'];
+                var tdPrice = document.createElement('td');
+                tdPrice.innerHTML = '' + elem['price'];
+                var tdSum = document.createElement('td');
+                tdSum.innerHTML = elem['total'];
+                coolTr.appendChild(tdNo);
+                coolTr.appendChild(tdProductName);
+                coolTr.appendChild(tdCount);
+                coolTr.appendChild(tdUnit);
+                coolTr.appendChild(tdPrice);
+                coolTr.appendChild(tdSum);
+                document.getElementById('billing_table').appendChild(coolTr);
+            };
+            // строк ВСЕГО С НДС
+            var coolTr1 = document.createElement('tr');
+            var tdNdsLabel = document.createElement('td');
+            tdNdsLabel.colSpan = 5;
+            tdNdsLabel.className += 'right_aligned no_border';
+            tdNdsLabel.innerHTML = 'НДС:';
+            var tdNdsVal = document.createElement('td');
+            tdNdsVal.colSpan = 5;
+            tdNdsVal.innerHTML = '{{data_nds}}';
+            coolTr1.appendChild(tdNdsLabel);
+            coolTr1.appendChild(tdNdsVal);
+            document.getElementById('billing_table').appendChild(coolTr1);
+            // строка ИТОГО
+            var coolTr2 = document.createElement('tr');
+            var tdTotalLabel = document.createElement('td');
+            tdTotalLabel.colSpan = 5;
+            tdTotalLabel.className += 'right_aligned no_border';
+            tdTotalLabel.innerHTML = 'Итого:';
+            var tdTotalVal = document.createElement('td');
+            tdTotalVal.colSpan = 5;
+            tdTotalVal.innerHTML = '{{data_total}}';
+            coolTr2.appendChild(tdTotalLabel);
+            coolTr2.appendChild(tdTotalVal);
+            document.getElementById('billing_table').appendChild(coolTr2);
+            // div.total
+            document.getElementById('total_div').innerHTML += 'Всего наименований '+data.length+', на сумму {{data_total}} руб.<br /><span class="bold">{{data_total_rub_words}} рублей {{data_total_cents_words}} копеек</span>';
+        };
+    </script>
+        <table id="billing_table">
+            <tr>
+                <td><span class="bold">No</span></td>
+                <td><span class="bold">Наименование товара</span></td>
+                <td><span class="bold">Кол-во</span></td>
+                <td><span class="bold">Ед.</span></td>
+                <td><span class="bold">Цена, руб.</span></td>
+                <td><span class="bold">Сумма, руб.</span></td>
+            </tr>
+        </table>
+        <div class="total" id="total_div"></div>
+    </div>
+    <div class="signs">
+        <table>
+            <tr>
+                <td class="bold">Генеральный директор</td>
+                <td class="signs__placeholder">&nbsp;</td>
+                <td class="bold">({{org_seo}})</td>
+            </tr>
+            <tr>
+                <td class="bold">Главный бухгалтер</td>
+                <td class="signs__placeholder">&nbsp;</td>
+                <td class="bold">({{org_buh}})</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

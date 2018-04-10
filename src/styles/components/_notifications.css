@@ -1,0 +1,102 @@
+.m2notification_container{
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	padding: 20px;
+	top: 0;
+	left: 0;
+}
+
+.m2notification_container.m2hide_note{
+	display: none;
+}
+
+.m2notification_container .m2note{
+	position: relative;
+	width: 100%;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	text-align: left;
+	background-color: #e2e2e2;
+	padding: 10px;
+	font-size: 0px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.m2notification_container .m2note.m2note_close{
+	display: none;
+}
+
+
+
+
+.m2notification_container .m2note > div{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+}
+
+.m2notification_container .m2note .m2note_info{
+	width: 90%;
+	
+}
+
+.m2notification_container .m2note .m2note_info .m2note_title{
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.m2notification_container .m2note .m2note_info .m2note_text{
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.m2notification_container .m2note .m2note_actions {
+	text-align: right;
+	width: 10%;
+}
+
+.m2notification_container .m2note .m2note_actions .m2note_close{
+	display: inline-block;
+	text-decoration: none;
+	width: 20px;
+	height: 20px;
+}
+
+.m2notification_container .m2note .m2note_actions .m2note_close svg{
+	width: 20px;
+	height: 20px;
+}
+
+.m2form_main_container{
+	position: relative;
+}
+
+
+.m2notification_container .m2note.m2error{
+	background-color: #BB2920;
+	color: #FFF;
+	text-shadow: 1px 0px 3px rgba(15, 15, 15, 0.25);
+}
+.m2notification_container .m2note.m2error .m2note_actions .m2note_close svg,
+.m2notification_container .m2note.m2info .m2note_actions .m2note_close svg,
+.m2notification_container .m2note.m2success .m2note_actions .m2note_close svg {
+	fill: #FFF;
+}
+
+.m2notification_container .m2note.m2info{
+	background-color: #db731e;
+	color: #FFF;
+	text-shadow: 1px 0px 3px rgba(15, 15, 15, 0.25);
+}
+.m2notification_container .m2note.m2success{
+	background-color: #2fbb20;
+	color: #FFF;
+	text-shadow: 1px 0px 3px rgba(15, 15, 15, 0.25);
+}
+
+
+.m2dashboard_container .m2notification_container{
+	display: block;
+	z-index: 9999;
+}

@@ -1,0 +1,112 @@
+.trPopup{
+    background-color: #f7ed2c;
+    border-radius: 4px;
+    padding: 5px;
+    display: inline-block;
+    position: relative;
+
+}
+
+
+.trPopup:hover .trPopupContainer{
+    display: block;
+}
+
+.trPopupContainer:before{
+    border: 10px solid transparent;
+    border-bottom: 10px solid #FFF;
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    margin-top: -10px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.trPopupContainer,.m2dashboard_filter a span.trPopupContainer {
+    max-width: 200px;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    display: none;
+    min-width: 300px;
+}
+
+.trPopupContent{
+    border-radius: 4px;
+    background-color: #FFF;
+    box-shadow: 0 3px 10px 0 rgba(0,51,113,0.06);
+    padding: 10px 10px 5px 10px;
+    display: block;
+    position: relative;
+    margin-top: 10px;
+}
+
+.trPopupContent input{
+    background: #FFFFFF;
+    border: 1px solid #C9D2E1;
+    border-radius: 4px;
+    font-weight: normal;
+    font-family: 'SF UI Display';
+    font-size: 12px;
+    color: #939DAF;
+    line-height: 20px;
+    height: 30px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.trPopupContent span{
+    padding-bottom: 5px;
+}
+
+.trPopupContent span.def{
+    display: block;
+    color: grey;
+    width: 100%;
+    min-width: 100%;
+    padding: 5px;
+}
+
+.trPopupContainer .trRow{
+    margin-bottom: 5px;
+    display: block;
+}
+
+.trPopupContainer .trRow button{
+    margin-top: 10px;
+    background: #1772E0;
+    box-shadow: 0 3px 10px 0 rgba(0,51,113,0.17);
+    border-radius: 4px;
+    width: 100%;
+    border: none;
+    height: 30px;
+    font-weight: 300;
+    font-family: 'SF UI Display';
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.m2dash_item_content_row .trPopupContainer{
+   position: fixed;
+   margin-top: -120px;
+}
+
+.m2btn .trPopupContainer{
+    position: fixed;
+    margin-top: 10px;
+    margin-left: -70px;
+}
+
+.m2btn .trPopup > span{
+    color: #000000;
+}
+
+.m2dashboard_platform_full .title span.trPopupContainer{
+    display: none;
+}
+
+.m2dashboard_platform_full .title span.trPopup:hover span.trPopupContainer{
+    display: block;
+}

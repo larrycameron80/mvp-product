@@ -1,0 +1,265 @@
+.m2form_container.m2form_main_container{
+	max-width: 780px;
+	width: 100%;
+	margin: 0 auto;
+	background: #FFFFFF;
+	box-shadow: 0 3px 10px 0 rgba(0,51,113,0.06);
+	border-radius: 6px;
+	padding: 20px 60px;
+}
+
+.m2form_container.m2form_main_container .m2form_title{
+	font-family: 'SF UI Display', Arial, sans-serif;
+	font-weight: 300;
+	font-size: 24px;
+	color: #586170;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.m2form_container.m2form_main_container .m2form_fields{}
+
+.m2form_container.m2form_main_container .m2form_fields .m2form_row{
+	margin-bottom: 20px;
+	text-align: left;
+	font-size: 0px;
+}
+
+.m2form_container.m2form_main_container .m2form_fields .m2form_row:last-child{
+	margin-bottom: 0px;
+}
+
+.m2form_container.m2form_main_container .m2form_fields .m2form_row .m2form_col{
+	display: inline-block;
+	width: 320px;
+	font-size: 12px;
+	white-space: normal;
+	vertical-align: top;
+	margin-right: 20px;
+}
+
+.m2form_container.m2form_main_container .m2form_fields .m2form_row .m2form_col:last-child{
+	margin-right: 0px;
+}
+
+
+.m2form_main_container label{
+	display: block;
+	font-family: 'SF UI Display', Arial, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #586170;
+	line-height: 20px;
+}
+
+.m2form_main_container input{
+	width: 100%;
+	background: #FBFBFD;
+	border: 1px solid #C9D2E1;
+	border-radius: 4px;
+	height: 34px;
+	padding-left: 10px;
+	padding-right: 10px;
+	outline: none;
+	font-family: 'SF UI Display', Arial, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #8690a0;
+	line-height: 20px;
+}
+
+.m2form_main_container input::-webkit-input-placeholder {
+	font-family: 'SF UI Display', Arial, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #939DAF;
+	line-height: 20px;
+}
+
+.m2form_main_container input::-moz-placeholder {
+	font-family: 'SF UI Display', Arial, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #939DAF;
+	line-height: 20px;
+}
+
+.m2form_main_container input:-ms-input-placeholder {
+	font-family: 'SF UI Display', Arial, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #939DAF;
+	line-height: 20px;
+}
+
+.m2form_main_container input:-moz-placeholder {
+	font-family: 'SF UI Display', Arial, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #939DAF;
+	line-height: 20px;
+}
+
+.m2form_main_container .m2select_column{
+	position: relative;
+}
+
+.m2form_main_container .m2select_column:after{
+	content: "";
+	width: 10px;
+	height: 6px;
+	display: block;
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	margin-top: -2px;
+	right: 0;
+	margin-right: 10px;
+	background-image: url('/images/select_shape.svg');
+	background-repeat: no-repeat;
+	transition: all 0.3s ease 0s;
+}
+
+.m2map_filter .m2select_column:focus:after{
+	transform: rotate(-180deg);
+}
+
+
+.m2form_main_container .m2select_column select option{
+	background: #FBFBFD;
+	font-size: 12px;
+	color: #939DAF;
+}
+
+.m2form_container.m2form_main_container .m2form_fields .m2form_row.m2form_note{
+	text-align: center;
+	font-family: 'SF UI Display', Arial, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #586170;
+	line-height: 20px;
+}
+
+.m2form_container.m2form_main_container .m2form_fields .m2form_row.m2form_note a{
+	color: #BB2920;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.m2form_container.m2form_main_container .m2form_fields .m2form_row.m2form_note a:after{
+	width: 100%;
+	height: 1px;
+	border-top: 1px dashed #BB2920;
+	display: block;
+	content: "";
+	transition: all 0.3s ease 0s;
+	position: relative;
+	top: -2px;
+}
+
+.m2form_container.m2form_main_container .m2form_fields .m2form_row.m2form_note a:hover:after{
+	opacity: 0;
+}
+
+.m2form_container.m2form_main_container .m2form_fields .m2form_row.m2form_buttons{
+	font-size: 0px;
+	text-align: center;
+	width: 100%;
+}
+
+.m2form_main_container .m2form_buttons .m2form_captcha, .m2form_main_container .m2form_buttons button{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 30px;
+}
+
+.m2form_main_container .m2form_buttons .m2form_captcha{
+	width: 205px;
+	height: 51px;
+	background-color: #f1f1f1;
+	margin-right: 60px;
+	transform: scale(0.7);
+    margin-top: -18px;
+}
+
+.m2form_main_container button{
+	border: none;
+}
+
+.m2form_main_container .m2select_column select{
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+	width: 100%;
+	height: 34px;
+	background: #FBFBFD;
+	border: 1px solid #C9D2E1;
+	border-radius: 4px;
+	font-weight: 500;
+	font-size: 12px;
+	color: #939DAF;
+	line-height: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	outline: none;
+	display: inline-block;
+	position: relative;
+	padding-right: 20px;
+}
+
+
+@media (max-width: 1024px) {
+
+	.m2form_container.m2form_main_container{
+		margin-left: 20px;
+		margin-right: 20px;
+		width: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.m2form_container.m2form_main_container .m2form_fields .m2form_row{
+		margin-bottom: 0px;
+	}
+	.m2form_container.m2form_main_container .m2form_fields .m2form_row .m2form_col{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.m2form_main_container .m2form_buttons .m2form_captcha{
+		width: 100%;
+		text-align: center;
+		display: block;
+		height: auto;
+		transform: scale(0.75);
+		margin-top: 20px;
+		background-color: transparent;
+	}
+
+	.m2form_main_container .m2form_buttons .m2form_captcha > div{
+		display: inline-block;
+	}
+
+	.m2form_main_container .m2form_buttons button{
+		width: 100%;
+		text-align: center;
+		display: block;
+		margin-top: 20px;
+		min-width: 100%;
+	}
+}
+
+
+@media (max-width: 320px) {
+	.m2form_container.m2form_main_container{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.m2form_main_container .m2form_buttons .m2form_captcha{
+		overflow: hidden;
+		text-align: left;
+	}
+	.m2form_main_container .m2form_buttons .m2form_captcha div{
+		transform: scale(0.85);
+		margin-left: -10px;
+	}
+}

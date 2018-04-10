@@ -1,0 +1,21 @@
+@import '_normalize.css';
+@import '_fonts.css';
+@import '_grid.css';
+
+/*components*/
+@import './components/_header.css';
+@import './components/_footer.css';
+@import './components/_reg_form.css';
+@import './components/_auth_form.css';
+@import './components/_notifications.css';
+@import './components/_m2loading.css';
+@import './components/_date.css';
+@import './components/_translate.css';
+
+/*pages*/
+@import './pages/main_page.css';
+@import './pages/contact_page.css';
+@import './pages/signin.css';
+
+/*dashboard*/
+@import './dashboard/require.css';

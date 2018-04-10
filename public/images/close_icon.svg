@@ -1,0 +1,27 @@
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="10" cy="10" r="10"></circle>
+        <filter x="-82.5%" y="-67.5%" width="265.0%" height="265.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.2   0 0 0 0 0.443137255  0 0 0 0.060009058 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Личный-кабинет---администратор" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Администратор---платежи---создать-счёт" transform="translate(-698.000000, -619.000000)">
+            <g id="пополнение" transform="translate(470.000000, 217.000000)">
+                <g id="Добавить-компанию" transform="translate(250.142136, 420.142136) rotate(-315.000000) translate(-250.142136, -420.142136) translate(240.142136, 410.142136)">
+                    <g id="Oval-3">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#1772E0" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <text id="+" font-family="SFUIDisplay-Medium, SF UI Display" font-size="16" font-weight="400" fill="#FFFFFF">
+                        <tspan x="5" y="15">+</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

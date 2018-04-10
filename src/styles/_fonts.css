@@ -1,0 +1,48 @@
+@font-face {
+	font-family: 'SF UI Display';
+	src: url('./fonts/subset-SFUIDisplay-Light.eot');
+	src: url('./fonts/subset-SFUIDisplay-Light.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/subset-SFUIDisplay-Light.woff2') format('woff2'),
+		url('./fonts/subset-SFUIDisplay-Light.woff') format('woff'),
+		url('./fonts/subset-SFUIDisplay-Light.ttf') format('truetype'),
+		url('./fonts/subset-SFUIDisplay-Light.svg#SFUIDisplay-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SF UI Display';
+	src: url('./fonts/subset-SFUIDisplay-Regular.eot');
+	src: url('./fonts/subset-SFUIDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/subset-SFUIDisplay-Regular.woff2') format('woff2'),
+		url('./fonts/subset-SFUIDisplay-Regular.woff') format('woff'),
+		url('./fonts/subset-SFUIDisplay-Regular.ttf') format('truetype'),
+		url('./fonts/subset-SFUIDisplay-Regular.svg#SFUIDisplay-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'SF UI Display';
+	src: url('./fonts/subset-SFUIDisplay-Semibold.eot');
+	src: url('./fonts/subset-SFUIDisplay-Semibold.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/subset-SFUIDisplay-Semibold.woff2') format('woff2'),
+		url('./fonts/subset-SFUIDisplay-Semibold.woff') format('woff'),
+		url('./fonts/subset-SFUIDisplay-Semibold.ttf') format('truetype'),
+		url('./fonts/subset-SFUIDisplay-Semibold.svg#SFUIDisplay-Semibold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SF UI Display';
+	src: url('./fonts/subset-SFUIDisplay-Medium.eot');
+	src: url('./fonts/subset-SFUIDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/subset-SFUIDisplay-Medium.woff2') format('woff2'),
+		url('./fonts/subset-SFUIDisplay-Medium.woff') format('woff'),
+		url('./fonts/subset-SFUIDisplay-Medium.ttf') format('truetype'),
+		url('./fonts/subset-SFUIDisplay-Medium.svg#SFUIDisplay-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}

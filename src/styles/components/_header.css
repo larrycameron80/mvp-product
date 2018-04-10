@@ -1,0 +1,230 @@
+.m2page_header {
+	background-color: #FFF;
+	font-size: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	box-shadow: 0 4px 12px 0 rgba(0,51,113,0.06);
+}
+
+.m2page_controller .m2row_container{
+	max-width: 830px;
+}
+
+.m2page_header div[class^="m2col_"] {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+}
+
+.m2page_header nav{
+	font-size: 0px;
+	text-align: left;
+}
+
+.m2page_header nav a{
+	text-decoration: none;
+	font-size: 15px;
+	color: #1670DE;
+	font-weight: 300;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right:  10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	transition: all 0.3s ease 0s;
+}
+
+.m2page_header nav a.display_mobile{
+	display: none;
+}
+
+.m2page_header nav > a:after{
+	display: inline-block;
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	margin-bottom: -20px;
+	left: 0;
+	background-color: #1670DE;
+	opacity: 0;
+	transition: all 0.3s ease 0s;
+}
+
+.m2page_header nav > a:hover:after,.m2page_header nav > a.active:after{
+	opacity: 1;
+}
+
+.m2page_header .m2langs{
+	display: inline-block;
+	position: relative;
+}
+
+.m2page_header .m2langs .default_lang {
+	position: relative;
+	top: 1px;
+	border-bottom: 1px dashed #1670DE;
+	padding: 0px;
+}
+
+.m2page_header .m2langs ul{
+	display: none;
+	position: absolute;
+	background: #FFFFFF;
+	box-shadow: 0 3px 10px 0 rgba(0,51,113,0.06);
+	border-radius: 4px;
+	top: 0;
+	padding: 10px 0px 20px 10px;
+	list-style: none;
+	margin-top: -16px;
+	margin-left: -10px;
+	min-width: 160px;
+}
+
+.m2page_header .m2langs ul.visible{
+	display: block;
+	z-index: 4;
+}
+
+.m2page_header .m2langs ul li {
+	display: inline-block;
+	text-align:left;
+	line-height: 30px;
+	width: 100%;
+}
+
+
+.m2page_header .m2langs ul li a{
+	color: #939DAF;
+	transition: all 0.3s ease 0s;
+}
+
+
+
+.m2page_header .m2langs ul li a:hover{
+	color:#1670DE;
+}
+
+.m2page_header nav a:hover,.m2page_header nav a:active{
+	color: #1363c4;
+}
+
+.m2page_header nav a:last-child{
+	margin-right: 0px;
+}
+
+.m2page_header.m2page_row_fixed{
+	box-shadow: 0 4px 12px 0 rgba(0,51,113,0.06);
+}
+
+@media (min-width: 1024px) {
+	.m2col_langs.m2langs.mobile {
+		display: none;
+	}
+
+	.m2col_langs.m2langs.not_mobile {
+		display: inline-block;
+	}
+}
+@media (max-width: 1024px) {
+	.m2page_header nav > a:hover:after,.m2page_header nav > a.active:after{
+		opacity: 0;
+	}
+	.m2page_header .m2_login_col{display: none !important;}
+	.m2page_header{
+		padding: 20px;
+	}
+
+	.m2col_6.m2_nav_col{
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #FFF;
+		width: 100%;
+		margin-top: -100%;
+		
+		overflow: hidden;
+		transition: all 0.3s ease 0s;
+	}
+
+	.m2col_6.m2_nav_col.menu_open{
+		margin-top: 59px;
+	}
+
+	.m2col_langs.m2langs.mobile {
+		display: inline-block;
+	}
+
+	.m2col_langs.m2langs.not_mobile {
+		display: none;
+	}
+
+	.m2page_header .m2langs ul{
+		padding: 10px;
+		margin: 30px auto 0 auto;
+		width: 100%;
+	}
+
+	.m2page_header .m2langs{
+		width: 60%;
+		text-align: center;
+		font-size: 16px !important;
+		display: inline-block;
+	}
+
+	.m2page_header .m2langs a{
+		color: #1772E0;
+		transition: all 0.3s ease 0s;
+		text-decoration: none;
+	}
+
+	.m2page_header .m2langs a.default_lang.visible{
+		border: none;
+	}
+
+	.m2page_header .m2langs a:visited{
+		color: #1772E0;
+	}
+
+	.m2page_header .m2langs a:active{
+		color: #1772E0;
+	}
+
+	.m2page_header .m2langs a:hover{
+		color:#1772E0;
+	}
+
+	.m2page_header .m2langs ul li {
+		display: inline-block;
+		text-align: center;
+		line-height: 30px;
+		width: 100%;
+	}
+
+	.m2page_header .m2langs ul.visible li a{
+		color: #939DAF;
+	}
+
+	.m2col_6.m2_nav_col nav a{
+		display: block;
+		text-align: center;
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 16px;
+		color: #1670DE;
+		margin-bottom: 20px;
+	}
+
+	.m2page_header .m2trigger_mobile_container{
+		display: inline-block;
+		text-align: right;
+		width: 20%;
+		vertical-align: middle;
+	}
+}

@@ -1,0 +1,38 @@
+.m2form_container.m2form_main_container.m2auth_form{
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+
+.m2form_container.m2form_main_container.m2auth_form form{
+	display:block;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.m2form_container.m2form_main_container.m2auth_form .m2form_fields{
+	margin-bottom: 20px;
+}
+
+.m2form_container.m2form_main_container.m2auth_form .m2form_buttons{
+	text-align: center;
+	margin-top: 20px;
+}
+
+
+@media (max-width: 1024px) {
+
+	.m2form_container.m2form_main_container.m2auth_form{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.m2form_container.m2form_main_container.m2auth_form .m2form_buttons{
+		width: 100%;
+		max-width: 320px;
+	}
+
+	.m2form_container.m2form_main_container.m2auth_form .m2form_buttons button{
+		min-width: auto;
+	}
+}
