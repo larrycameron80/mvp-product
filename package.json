@@ -30,7 +30,7 @@
     "debug": "^2.6.6",
     "encoding": "^0.1.12",
     "express": "^4.15.2",
-    "express-fileupload": "^0.1.4",
+    "express-fileupload": "^1.1.6",
     "faker": "^4.1.0",
     "html-pdf": "^2.1.0",
     "html-webpack-plugin": "^2.28.0",
