@@ -7,7 +7,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "World WiFi Team",
@@ -77,6 +79,8 @@
     "text-encoding": "^0.6.4",
     "uniqid": "^4.1.1",
     "uuid": "^3.1.0",
-    "winston": "^2.3.1"
-  }
+    "winston": "^2.3.1",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
