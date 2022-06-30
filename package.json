@@ -52,7 +52,7 @@
     "oauth2orize": "^1.8.0",
     "particles.js": "^2.0.0",
     "particlesjs": "^2.0.2",
-    "passport": "^0.3.2",
+    "passport": "^0.6.0",
     "passport-http": "^0.3.0",
     "passport-http-bearer": "^1.0.1",
     "passport-oauth2-client-password": "^0.1.2",
