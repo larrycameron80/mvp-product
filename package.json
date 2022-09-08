@@ -44,7 +44,7 @@
     "mongoose": "^4.9.7",
     "mongoose-double": "0.0.1",
     "nconf": "^0.8.4",
-    "node-sass": "^4.5.2",
+    "node-sass": "^7.0.2",
     "normalizr": "^3.2.3",
     "npm-run-all": "^4.0.2",
     "nsmarty": "0.0.1",
