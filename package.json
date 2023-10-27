@@ -20,7 +20,7 @@
     "redux-logger": "^3.0.6"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^1.6.0",
     "body-parser": "^1.17.1",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
